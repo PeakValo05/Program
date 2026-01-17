@@ -2,5 +2,6 @@
   <Project Path="FactorialRecursion/FactorialRecursion.csproj" Id="17a14df2-aa50-46bb-811e-c5b0e350feaf" />
   <Project Path="FloodFillRecursion/FloodFillRecursion.csproj" Id="03c46d78-fe28-4fc3-b0c5-904139fb1aa7" />
   <Project Path="GreatestCommonDivisorRecursion/GreatestCommonDivisorRecursion.csproj" Id="4473d7f4-32fb-4234-8292-3acfee17714c" />
+  <Project Path="PrintBoard/PrintBoard.csproj" Id="96143c0f-441d-4166-9b88-b3041290a255" />
   <Project Path="Program/Program.csproj" />
 </Solution>

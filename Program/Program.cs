@@ -5,13 +5,12 @@ class Program
     static void Main()
     {
 
-  /*Jackson Wiser
- * CST-250
- * 1/18/2026
- * Factorial Recurssion
- * Activity 3
- */
-
+        /*Jackson Wiser
+       * CST-250
+       * 1/18/2026
+       * Factorial Recurssion
+       * Activity 3
+       */
         // Ask the user for a positive number
         Console.Write("Enter a positive number: ");
         string input = Console.ReadLine();
@@ -54,6 +53,7 @@ static class Utility
             Console.WriteLine("The number is odd. Add 1");
             return CountToOne(num + 1, ref steps); // odd rule: add 1
         }
+        
     }
 }
 
