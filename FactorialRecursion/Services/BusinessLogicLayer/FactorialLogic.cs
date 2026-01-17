@@ -35,9 +35,9 @@ namespace FactorialRecursion.Services.BusinessLogicLayer
                 result *= 1;
 
             // Return the result
-            return result; 
-            
-            }
+            return result;
+
+        }
             internal BigInteger SolveRecursionFactorial(int factorial)
         {
             // Base case: factorial is 0 or 1
