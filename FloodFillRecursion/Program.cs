@@ -17,6 +17,8 @@ using FloodFillRecursion.Models;
 //Start of Main method
 //-------------------------------------------------------------------------------------------------------------------
 
+
+
 /// <summary>
 /// Main method for testing the BoardModel and Utility class.
 /// 
@@ -30,11 +32,23 @@ using FloodFillRecursion.Models;
 // Declare and initialize
 // Create a new BoardModel
 BoardModel board = new BoardModel(20, 3);
-
+int startRow = -1, startCol = -1;
+// Print the board to the console
 Utility.PrintBoard(board);
+// prompt the user for the starting row (1 - 20)
+Console.Write("Enter the row to start the flood fill at: ");
 
-board = Utility.FloodFill(board, 0, 0);
+startRow = Utility.ReadIntFromConsole() - 1;
+// prompt the user for the starting comumn (1 - 20)
+Console.Write("Enter the column to start the flood fill at: ");
 
+// removing 1 from the input to get 0-19 range for col
+startCol = Utility.ReadIntFromConsole() - 1;
+
+// call the flood fill method using the board
+board = Utility.FloodFill(board, startRow, startCol);
+
+// Print the new board
 Utility.PrintBoard(board);
 
 
@@ -49,6 +63,28 @@ Utility.PrintBoard(board);
 
 static class Utility
 {
+
+    /// <summary>
+    /// Read an integer number from the console
+    /// </summary>
+    /// <returns></returns>
+
+    internal static int ReadIntFromConsole()
+    {
+        int num = -1;
+
+        while (!int.TryParse(Console.ReadLine(), out num))
+        {
+            Console.Write("Invalid input. Please enter an integer");
+        }
+        return num;
+
+    }
+
+
+
+
+
     /// <summary>
     /// Print the board to the console
     /// Loops through each row and column of the BoardModel's Grid
@@ -179,14 +215,7 @@ static class Utility
         return board;
         // End of FloodFill method
 
-           
-
-
-
-
-
-
-
+          
         // CHeck if the current cell is a wall
         if (row < 0 || row >= board.Size || col < 0 || col >= board.Size)
         {
@@ -222,7 +251,6 @@ static class Utility
 
     } // End of FloodFill method
 }
-
 
 
 
